@@ -1,0 +1,16 @@
+# ---- Python 生成物 ----
+__pycache__/
+*.pyc
+build/
+dist/
+.venv/
+*.pkg
+
+# ---- Android / Gradle 生成物 ----
+.gradle/
+local.properties
+*.apk
+*.rar
+
+# ---- 大二进制（成品压缩包不入库，需要时走 GitHub Releases）----
+*.exe

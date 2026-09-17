@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_page"
+    android:padding="12dp">
+
+    <!-- ============ 4个圆形仪表盘 ============ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <com.env.newland.envmonitor.CircularGaugeView
+            android:id="@+id/gaugeTemp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="6dp" />
+
+        <com.env.newland.envmonitor.CircularGaugeView
+            android:id="@+id/gaugeHum"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="6dp" />
+
+        <com.env.newland.envmonitor.CircularGaugeView
+            android:id="@+id/gaugeLight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="6dp" />
+
+        <com.env.newland.envmonitor.CircularGaugeView
+            android:id="@+id/gaugeHuman"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="6dp" />
+    </LinearLayout>
+
+    <!-- ============ 规则配置区 ============ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <!-- 规则行1 -->
+        <LinearLayout
+            android:id="@+id/ruleRow1"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/rule_bg"
+            android:paddingLeft="8dp"
+            android:paddingRight="4dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当 "
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/spRule1Sensor"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:background="@color/spinner_bg"
+                android:popupBackground="#1E3045" />
+
+            <Spinner
+                android:id="@+id/spRule1Op"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:background="@color/spinner_bg"
+                android:popupBackground="#1E3045" />
+
+            <EditText
+                android:id="@+id/etRule1Threshold"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="0.7"
+                android:layout_marginLeft="4dp"
+                android:background="@color/spinner_bg"
+                android:hint="100"
+                android:textColorHint="#546E7A"
+                android:inputType="numberDecimal|numberSigned"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <ToggleButton
+                android:id="@+id/tbRule1Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="6dp"
+                android:textOn="ON"
+                android:textOff="OFF"
+                android:checked="true"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <Spinner
+                android:id="@+id/spRule1Actuator"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:background="@color/spinner_bg"
+                android:popupBackground="#1E3045" />
+
+            <ImageView
+                android:id="@+id/ivRule1Icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_led_on"
+                android:contentDescription="执行器图标" />
+        </LinearLayout>
+
+        <!-- 规则行2 -->
+        <LinearLayout
+            android:id="@+id/ruleRow2"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/rule_bg"
+            android:paddingLeft="8dp"
+            android:paddingRight="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当 "
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/spRule2Sensor"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:background="@color/spinner_bg"
+                android:popupBackground="#1E3045" />
+
+            <Spinner
+                android:id="@+id/spRule2Op"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:background="@color/spinner_bg"
+                android:popupBackground="#1E3045" />
+
+            <EditText
+                android:id="@+id/etRule2Threshold"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="0.7"
+                android:layout_marginLeft="4dp"
+                android:background="@color/spinner_bg"
+                android:hint="75"
+                android:textColorHint="#546E7A"
+                android:inputType="numberDecimal|numberSigned"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <ToggleButton
+                android:id="@+id/tbRule2Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="6dp"
+                android:textOn="ON"
+                android:textOff="OFF"
+                android:checked="false"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <Spinner
+                android:id="@+id/spRule2Actuator"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:background="@color/spinner_bg"
+                android:popupBackground="#1E3045" />
+
+            <ImageView
+                android:id="@+id/ivRule2Icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_fan_off"
+                android:contentDescription="执行器图标" />
+        </LinearLayout>
+
+        <!-- 底部注释 + 逻辑切换 + 通道设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="注:人体传感器值1表示有人，0表示无人。"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="逻辑切换："
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <ToggleButton
+                android:id="@+id/tbLogic"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:textOn="ON"
+                android:textOff="OFF"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/bg_btn"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="通道设置"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ============ 演示模式标记 ============ -->
+    <TextView
+        android:id="@+id/tvDemoBadge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#33FF8F00"
+        android:padding="4dp"
+        android:text="★ 演示模式"
+        android:textColor="#FFB300"
+        android:textSize="11sp"
+        android:visibility="gone" />
+</LinearLayout>

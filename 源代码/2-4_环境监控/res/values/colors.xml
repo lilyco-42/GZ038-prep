@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00838F</color>
+    <color name="colorPrimaryDark">#006064</color>
+    <color name="colorAccent">#FFB300</color>
+
+    <color name="bg_page">#1A2332</color>
+    <color name="bg_card">#223344</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#90A4AE</color>
+
+    <color name="gauge_blue">#00BCD4</color>
+    <color name="gauge_green">#4CAF50</color>
+    <color name="gauge_yellow">#FFB300</color>
+    <color name="gauge_pink">#FF5252</color>
+
+    <color name="switch_on">#00BCD4</color>
+    <color name="switch_off">#546E7A</color>
+    <color name="rule_bg">#1E3045</color>
+    <color name="spinner_bg">#263850</color>
+</resources>

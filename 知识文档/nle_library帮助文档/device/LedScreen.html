@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module LedScreen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>LedScreen</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:g%3A%5Cnledevice%5Cpythonlibrary%5Cnle_library%5Cdevice%5Cledscreen.py">g:\nledevice\pythonlibrary\nle_library\device\ledscreen.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="LedScreen.html#LedScreen">LedScreen</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LedScreen">class <strong>LedScreen</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>LED屏协议类<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Static methods defined here:<br>
+<dl><dt><a name="LedScreen-clearLedScreenFrame"><strong>clearLedScreenFrame</strong></a>(address)</dt><dd><tt>清空LED屏(数据帧)<br>
+:param&nbsp;address:设备地址<br>
+:return:数据帧</tt></dd></dl>
+
+<dl><dt><a name="LedScreen-deleteWindow"><strong>deleteWindow</strong></a>(address, winId)</dt><dd><tt>删除窗体<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;winId:窗体ID</tt></dd></dl>
+
+<dl><dt><a name="LedScreen-setLedScreenTextFrame"><strong>setLedScreenTextFrame</strong></a>(address, x, y, textSize, textColor, txt)</dt><dd><tt>设置显示文本(数据帧)<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;x:&nbsp;x坐标<br>
+:param&nbsp;y:&nbsp;y坐标<br>
+:param&nbsp;textSize:字号&nbsp;（12~16）<br>
+:param&nbsp;textColor:&nbsp;颜色（0~1）<br>
+:param&nbsp;txt:&nbsp;文字内容<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="LedScreen-setLedScreenWindowFrame"><strong>setLedScreenWindowFrame</strong></a>(address, x, y, width, height, txt, clear, effect, speed, stay, textSize, textColor)</dt><dd><tt>窗体文本(数据帧)<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;x:x起始坐标<br>
+:param&nbsp;y:y起始坐标<br>
+:param&nbsp;width:宽<br>
+:param&nbsp;height:高<br>
+:param&nbsp;txt:文本内容<br>
+:param&nbsp;clear:是否播放前清屏0不清&nbsp;1清屏<br>
+:param&nbsp;effect:特效&nbsp;5上移&nbsp;6下移&nbsp;7左移&nbsp;8右移&nbsp;(0~37)<br>
+:param&nbsp;speed:播放速度&nbsp;0-7<br>
+:param&nbsp;stay:停留时间&nbsp;&nbsp;秒<br>
+:param&nbsp;textSize:字体大小12&nbsp;14&nbsp;16<br>
+:param&nbsp;textColor:字体颜色0&nbsp;黑&nbsp;1&nbsp;红<br>
+:return:数据帧</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-print"><strong>print</strong></a>(...)</dt><dd><tt><a href="#-print">print</a>(value,&nbsp;...,&nbsp;sep='&nbsp;',&nbsp;end='\n',&nbsp;file=sys.stdout,&nbsp;flush=False)<br>
+&nbsp;<br>
+Prints&nbsp;the&nbsp;values&nbsp;to&nbsp;a&nbsp;stream,&nbsp;or&nbsp;to&nbsp;sys.stdout&nbsp;by&nbsp;default.<br>
+Optional&nbsp;keyword&nbsp;arguments:<br>
+file:&nbsp;&nbsp;a&nbsp;file-like&nbsp;<a href="builtins.html#object">object</a>&nbsp;(stream);&nbsp;defaults&nbsp;to&nbsp;the&nbsp;current&nbsp;sys.stdout.<br>
+sep:&nbsp;&nbsp;&nbsp;string&nbsp;inserted&nbsp;between&nbsp;values,&nbsp;default&nbsp;a&nbsp;space.<br>
+end:&nbsp;&nbsp;&nbsp;string&nbsp;appended&nbsp;after&nbsp;the&nbsp;last&nbsp;value,&nbsp;default&nbsp;a&nbsp;newline.<br>
+flush:&nbsp;whether&nbsp;to&nbsp;forcibly&nbsp;flush&nbsp;the&nbsp;stream.</tt></dd></dl>
+</td></tr></table>
+</body></html>

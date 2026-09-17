@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Trilateration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Trilateration</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:g%3A%5Cnledevice%5Cpythonlibrary%5Cnle_library%5Cutil%5Ctrilateration.py">g:\nledevice\pythonlibrary\nle_library\util\trilateration.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Trilateration.html#Trilateration">Trilateration</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Trilateration">class <strong>Trilateration</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>UWB三边测量<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Trilateration-GetLocation"><strong>GetLocation</strong></a>(self, anchorArrays, Range_deca)</dt><dd><tt>GetLocation<br>
+:param&nbsp;anchorArrays:&nbsp;&nbsp;anchorArrays<br>
+:param&nbsp;Range_deca:&nbsp;Range_deca<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-cross"><strong>cross</strong></a>(self, vector1, vector2)</dt><dd><tt>交叉<br>
+:param&nbsp;vector1:参数1<br>
+:param&nbsp;vector2:参数2<br>
+:return:位</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-deca_3dlocate"><strong>deca_3dlocate</strong></a>(self, p1, r1, p2, r2, p3, r3, p4, r4)</dt><dd><tt>deca_3dlocate<br>
+:param&nbsp;p1:&nbsp;p1<br>
+:param&nbsp;r1:&nbsp;r1<br>
+:param&nbsp;p2:&nbsp;p2<br>
+:param&nbsp;r2:&nbsp;r2<br>
+:param&nbsp;p3:&nbsp;p3<br>
+:param&nbsp;r3:&nbsp;r3<br>
+:param&nbsp;p4:&nbsp;p4<br>
+:param&nbsp;r4:&nbsp;r4<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-dot"><strong>dot</strong></a>(self, vector1, vector2)</dt><dd><tt>点<br>
+:param&nbsp;vector1:参数1<br>
+:param&nbsp;vector2:参数2<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-gdoprate"><strong>gdoprate</strong></a>(self, tag, p1, p2, p3)</dt><dd><tt>gdoprate<br>
+:param&nbsp;tag:tag<br>
+:param&nbsp;p1:p1<br>
+:param&nbsp;p2:p2<br>
+:param&nbsp;p3:p3<br>
+:return:值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-sphereline"><strong>sphereline</strong></a>(self, p1, p2, sc, r)</dt><dd><tt>sphereline<br>
+:param&nbsp;p1:&nbsp;p1<br>
+:param&nbsp;p2:&nbsp;p2<br>
+:param&nbsp;sc:&nbsp;sc<br>
+:param&nbsp;r:&nbsp;r<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-trilateration"><strong>trilateration</strong></a>(self, p1, r1, p2, r2, p3, r3, p4, r4, maxzero)</dt><dd><tt>trilateration<br>
+:param&nbsp;p1:&nbsp;p1<br>
+:param&nbsp;r1:&nbsp;r1<br>
+:param&nbsp;p2:&nbsp;p2<br>
+:param&nbsp;r2:&nbsp;r2<br>
+:param&nbsp;p3:&nbsp;p3<br>
+:param&nbsp;r3:&nbsp;r3<br>
+:param&nbsp;p4:&nbsp;p4<br>
+:param&nbsp;r4:&nbsp;r4<br>
+:param&nbsp;maxzero:&nbsp;maxzero<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-vdiff"><strong>vdiff</strong></a>(self, vector1, vector2)</dt><dd><tt>相减<br>
+:param&nbsp;vector1:参数1<br>
+:param&nbsp;vector2:&nbsp;参数2<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-vdist"><strong>vdist</strong></a>(self, vector1, vector2)</dt><dd><tt>距离<br>
+:param&nbsp;vector1:参数1<br>
+:param&nbsp;vector2:&nbsp;参数2<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-vdiv"><strong>vdiv</strong></a>(self, vector, n)</dt><dd><tt>除以N<br>
+:param&nbsp;vector:参数<br>
+:param&nbsp;n:&nbsp;N<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-vmul"><strong>vmul</strong></a>(self, vector, n)</dt><dd><tt>乘以N<br>
+:param&nbsp;vector:参数<br>
+:param&nbsp;n:&nbsp;N<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-vnorm"><strong>vnorm</strong></a>(self, vector)</dt><dd><tt>标准<br>
+:param&nbsp;vector:参数<br>
+:return:位</tt></dd></dl>
+
+<dl><dt><a name="Trilateration-vsum"><strong>vsum</strong></a>(self, vector1, vector2)</dt><dd><tt>相加<br>
+:param&nbsp;vector1:&nbsp;参数1<br>
+:param&nbsp;vector2:&nbsp;参数2<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-sqrt"><strong>sqrt</strong></a>(...)</dt><dd><tt><a href="#-sqrt">sqrt</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;square&nbsp;root&nbsp;of&nbsp;x.</tt></dd></dl>
+</td></tr></table>
+</body></html>

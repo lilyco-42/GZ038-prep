@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module ModbusDev</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>ModbusDev</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:g%3A%5Cnledevice%5Cpythonlibrary%5Cnle_library%5Cdevice%5Cmodbusdev.py">g:\nledevice\pythonlibrary\nle_library\device\modbusdev.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ModbusDev.html#ModbusDev">ModbusDev</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ModbusDev">class <strong>ModbusDev</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>ModbusRTU设备协议类<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Static methods defined here:<br>
+<dl><dt><a name="ModbusDev-getCo2Value"><strong>getCo2Value</strong></a>(data)</dt><dd><tt>获取485二氧化碳值<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getCo2ValueFrame"><strong>getCo2ValueFrame</strong></a>(address)</dt><dd><tt>获取485二氧化碳(数据帧)<br>
+:param&nbsp;address:&nbsp;设备地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsAddress"><strong>getGpsAddress</strong></a>(data)</dt><dd><tt>获取GPS地址<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsAddressFrame"><strong>getGpsAddressFrame</strong></a>()</dt><dd><tt>获取GPS地址(数据帧)<br>
+:return:数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsBps"><strong>getGpsBps</strong></a>(data)</dt><dd><tt>获取获取GPS&nbsp;Bps<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsBpsFrame"><strong>getGpsBpsFrame</strong></a>(address)</dt><dd><tt>获取GPS&nbsp;Bps(数据帧)<br>
+:param&nbsp;address:&nbsp;地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsData"><strong>getGpsData</strong></a>(data)</dt><dd><tt>获取Gps数据<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsDataFrame"><strong>getGpsDataFrame</strong></a>(address)</dt><dd><tt>获取Gps数据(数据帧)<br>
+:param&nbsp;address:地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsOdd"><strong>getGpsOdd</strong></a>(data)</dt><dd><tt>获取Gps&nbsp;Odd数据<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsOddFrame"><strong>getGpsOddFrame</strong></a>(address)</dt><dd><tt>获取Gps&nbsp;Odd(数据帧)<br>
+:param&nbsp;address:地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsVersion"><strong>getGpsVersion</strong></a>(data)</dt><dd><tt>获取GPS版本<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getGpsVersionFrame"><strong>getGpsVersionFrame</strong></a>(address)</dt><dd><tt>获取GPS版本(数据帧)<br>
+:param&nbsp;address:&nbsp;设备地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getIlluminance"><strong>getIlluminance</strong></a>(data)</dt><dd><tt>获取光照噪声的光照<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getIlluminanceFrame"><strong>getIlluminanceFrame</strong></a>(address)</dt><dd><tt>获取光照噪声的光照（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getLinkControlOutFrame"><strong>getLinkControlOutFrame</strong></a>(address, channel)</dt><dd><tt>获取联动控制器OUT（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;端口（0~3）<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getLinkReadIn"><strong>getLinkReadIn</strong></a>(data)</dt><dd><tt>获取联动控制器IN<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getLinkReadInFrame"><strong>getLinkReadInFrame</strong></a>(address, channel)</dt><dd><tt>获取联动控制器IN（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;端口（0~3）<br>
+:return:数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getLouverBoxTempHumiValue"><strong>getLouverBoxTempHumiValue</strong></a>(data)</dt><dd><tt>获取百叶箱温湿度值<br>
+:param&nbsp;data:数据<br>
+:return:值（temp,humi）</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getLouverBoxTempHumiValueFrame"><strong>getLouverBoxTempHumiValueFrame</strong></a>(address)</dt><dd><tt>获取百叶箱温湿度(数据帧)<br>
+:param&nbsp;address:&nbsp;设备地址<br>
+:return:&nbsp;协议</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getMotorCtrlAddress"><strong>getMotorCtrlAddress</strong></a>(data)</dt><dd><tt>获取电机控制器地址<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getMotorCtrlAddressFrame"><strong>getMotorCtrlAddressFrame</strong></a>()</dt><dd><tt>获取电机控制器地址（数据帧）<br>
+:return:数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getMotorCtrlDirectFrame"><strong>getMotorCtrlDirectFrame</strong></a>(address, channel)</dt><dd><tt>获取电机控制器方向（数据帧）<br>
+:param&nbsp;address:<br>
+:param&nbsp;channel:<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getMotorCtrlFreq"><strong>getMotorCtrlFreq</strong></a>(data)</dt><dd><tt>获取电机控制器频率<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getMotorCtrlFreqFrame"><strong>getMotorCtrlFreqFrame</strong></a>(address, channel)</dt><dd><tt>获取电机控制器频率（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getMotorCtrlGetDirect"><strong>getMotorCtrlGetDirect</strong></a>(data)</dt><dd><tt>获取电机控制器方向<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getMotorCtrlGetSpeed"><strong>getMotorCtrlGetSpeed</strong></a>(data)</dt><dd><tt>获取电机控制器速度<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getMotorCtrlSpeedFrame"><strong>getMotorCtrlSpeedFrame</strong></a>(address, channel)</dt><dd><tt>获取电机控制器速度（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getNoise"><strong>getNoise</strong></a>(data)</dt><dd><tt>获取光照噪声的噪声<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getNoiseFrame"><strong>getNoiseFrame</strong></a>(address)</dt><dd><tt>获取光照噪声的噪声（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getRTUIOTAnalogInput"><strong>getRTUIOTAnalogInput</strong></a>(data)</dt><dd><tt>获取IoT采集器AIN端口,RTU模式<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getRTUIOTAnalogInputFrame"><strong>getRTUIOTAnalogInputFrame</strong></a>(address, channel)</dt><dd><tt>获取IoT采集器VIN端口,RTU模式（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;AIN端口（0，2，4）<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getRTUIOTDigitalInput"><strong>getRTUIOTDigitalInput</strong></a>(data)</dt><dd><tt>获取IoT采集器DI口，RTU模式<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;8个DI值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getRTUIOTDigitalInputFrame"><strong>getRTUIOTDigitalInputFrame</strong></a>(address)</dt><dd><tt>获取IoT采集器DI口，RTU模式（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getUltrasonicAddress"><strong>getUltrasonicAddress</strong></a>(data)</dt><dd><tt>获取超声波地址<br>
+:param&nbsp;data:数据<br>
+:return:值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getUltrasonicValue"><strong>getUltrasonicValue</strong></a>(data)</dt><dd><tt>获取超声波值<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getUltrasonicValueFrame"><strong>getUltrasonicValueFrame</strong></a>(address, readMode)</dt><dd><tt>获取超声波值（数据帧）<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;readMode:&nbsp;读取模式<br>
+:return:&nbsp;数据值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getWaterImmersionData"><strong>getWaterImmersionData</strong></a>(data)</dt><dd><tt>获取水浸数据<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-getWaterImmersionDataFrame"><strong>getWaterImmersionDataFrame</strong></a>(address)</dt><dd><tt>获取水浸数据（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-readRTUIOTAddress"><strong>readRTUIOTAddress</strong></a>(data)</dt><dd><tt>获取IoT采集器地址，RTU模式<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-readRTUIOTAddressFrame"><strong>readRTUIOTAddressFrame</strong></a>()</dt><dd><tt>获取IoT采集器地址，RTU模式（数据帧）<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setCo2AddressFrame"><strong>setCo2AddressFrame</strong></a>(oldAddress, address)</dt><dd><tt>&nbsp;设置485二氧化碳地址(数据帧)<br>
+:param&nbsp;oldAddress:&nbsp;旧的地址<br>
+:param&nbsp;address:&nbsp;新地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setGpsAddressFrame"><strong>setGpsAddressFrame</strong></a>(oldAddress, address)</dt><dd><tt>设置Gps地址(数据帧)<br>
+:param&nbsp;oldAddress:<br>
+:param&nbsp;address:<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setGpsBpsFrame"><strong>setGpsBpsFrame</strong></a>(address, baud)</dt><dd><tt>设置Gps&nbsp;Bps（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;baud:&nbsp;波特率<br>
+:return:数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setIlluminanceNoiseAddress"><strong>setIlluminanceNoiseAddress</strong></a>(oldAddress, address)</dt><dd><tt>设置光照噪声地址（数据帧）<br>
+:param&nbsp;oldAddress:&nbsp;旧地址<br>
+:param&nbsp;address:&nbsp;新地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setLinkAllOnOffFrame"><strong>setLinkAllOnOffFrame</strong></a>(address, isAllOn)</dt><dd><tt>设置联动控制器全开全关（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;isAllOn:&nbsp;True开、False关<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setLinkControlOutFrame"><strong>setLinkControlOutFrame</strong></a>(address, channel, isOpen)</dt><dd><tt>设置联动控制器OUT（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;端口（0~3）<br>
+:param&nbsp;isOpen:&nbsp;True开、False关<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setLinkFlashOnOffFrame"><strong>setLinkFlashOnOffFrame</strong></a>(address, isFlashOn)</dt><dd><tt>设置联动控制器闪闭闪开（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;isFlashOn:&nbsp;True开、False关<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setMotorCtrlAddressFrame"><strong>setMotorCtrlAddressFrame</strong></a>(address)</dt><dd><tt>设置电机控制器地址（数据帧）<br>
+:param&nbsp;address:地址<br>
+:return:数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setMotorCtrlBpsFrame"><strong>setMotorCtrlBpsFrame</strong></a>(address, baud)</dt><dd><tt>设置电机控制器波特率（数据帧）<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;baud:&nbsp;波特率<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setMotorCtrlDirectFrame"><strong>setMotorCtrlDirectFrame</strong></a>(address, channel, direction)</dt><dd><tt>设置电机控制器方向（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:param&nbsp;direction:&nbsp;方向（0~1）<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setMotorCtrlFreqFrame"><strong>setMotorCtrlFreqFrame</strong></a>(address, channel, freq)</dt><dd><tt>设置电机控制器频率（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:param&nbsp;freq:&nbsp;频率<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setMotorCtrlSpeedFrame"><strong>setMotorCtrlSpeedFrame</strong></a>(address, channel, speed)</dt><dd><tt>设置电机控制器转速（数据帧）<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;channel:通道<br>
+:param&nbsp;speed:转速<br>
+:return:数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setMotorCtrlStopFrame"><strong>setMotorCtrlStopFrame</strong></a>(address, channel)</dt><dd><tt>设置电机控制器刹车（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setRTUIOTDigitalOutputFrame"><strong>setRTUIOTDigitalOutputFrame</strong></a>(address, channel, isOpen)</dt><dd><tt>设置IoT采集器DO口，RTU模式（数据帧）<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道<br>
+:param&nbsp;isOpen:&nbsp;开True，关False<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-setUltrasonicAddressFrame"><strong>setUltrasonicAddressFrame</strong></a>(oldAddress, address)</dt><dd><tt>设置超声波地址（数据帧）<br>
+:param&nbsp;oldAddress:&nbsp;旧地址<br>
+:param&nbsp;address:&nbsp;新地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="ModbusDev-writeRTUIOTAddressFrame"><strong>writeRTUIOTAddressFrame</strong></a>(oldAddress, address)</dt><dd><tt>设置IoT采集器地址，RTU模式（数据帧）<br>
+:param&nbsp;oldAddress:&nbsp;旧地址<br>
+:param&nbsp;address:&nbsp;新地址<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

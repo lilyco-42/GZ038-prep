@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- 叶片组：4 片沿中心 (64,64) 旋转 -->
+    <group
+        android:pivotX="64"
+        android:pivotY="64"
+        android:rotation="0">
+        <path
+            android:fillColor="#2196F3"
+            android:strokeColor="#0D47A1"
+            android:strokeWidth="2"
+            android:pathData="M64,72 C46,70 46,34 64,20 C82,34 82,70 64,72 Z" />
+    </group>
+    <group
+        android:pivotX="64"
+        android:pivotY="64"
+        android:rotation="90">
+        <path
+            android:fillColor="#2196F3"
+            android:strokeColor="#0D47A1"
+            android:strokeWidth="2"
+            android:pathData="M64,72 C46,70 46,34 64,20 C82,34 82,70 64,72 Z" />
+    </group>
+    <group
+        android:pivotX="64"
+        android:pivotY="64"
+        android:rotation="180">
+        <path
+            android:fillColor="#2196F3"
+            android:strokeColor="#0D47A1"
+            android:strokeWidth="2"
+            android:pathData="M64,72 C46,70 46,34 64,20 C82,34 82,70 64,72 Z" />
+    </group>
+    <group
+        android:pivotX="64"
+        android:pivotY="64"
+        android:rotation="270">
+        <path
+            android:fillColor="#2196F3"
+            android:strokeColor="#0D47A1"
+            android:strokeWidth="2"
+            android:pathData="M64,72 C46,70 46,34 64,20 C82,34 82,70 64,72 Z" />
+    </group>
+
+    <!-- 中心轮毂 -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M64,64 m-11,0 a11,11 0 1,1 22,0 a11,11 0 1,1 -22,0" />
+    <path
+        android:fillColor="#E3F2FD"
+        android:pathData="M64,64 m-4,0 a4,4 0 1,1 8,0 a4,4 0 1,1 -8,0" />
+</vector>

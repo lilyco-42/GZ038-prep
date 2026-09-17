@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- 微弱灰光 -->
+    <path
+        android:fillColor="#1E9E9E9E"
+        android:pathData="M64,56 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0" />
+    <!-- 玻璃泡 -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M64,56 m-30,0 a30,30 0 1,1 60,0 a30,30 0 1,1 -60,0" />
+    <!-- 内亮部 -->
+    <path
+        android:fillColor="#CFD8DC"
+        android:pathData="M64,56 m-20,0 a20,20 0 1,1 40,0 a20,20 0 1,1 -40,0" />
+    <!-- 灯丝 -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M64,70 m-8,0 a8,5 0 1,1 16,0 a8,5 0 1,1 -16,0" />
+    <!-- 底座 -->
+    <path
+        android:fillColor="#757575"
+        android:pathData="M55,84 L73,84 L79,114 L49,114 Z" />
+    <!-- 底座螺口线 -->
+    <path
+        android:fillColor="#616161"
+        android:pathData="M56,92 L72,92 L72,96 L56,96 Z" />
+    <path
+        android:fillColor="#616161"
+        android:pathData="M54,103 L74,103 L74,107 L54,107 Z" />
+    <!-- 高光 -->
+    <path
+        android:fillColor="#CCFFFFFF"
+        android:pathData="M53,44 m-9,0 a9,6 0 1,1 18,0 a9,6 0 1,1 -18,0" />
+</vector>

@@ -1,0 +1,28 @@
+综合显示屏配置工具 LEDCenter V1.26 修复版
+============================================
+
+【修复问题】
+原版 LEDCenter.exe (7192KB) 启动报错：
+  "No argument for format '%s'"
+  "Format 'EResNotFound' invalid or incompatible with argument"
+
+原因：原版缺少 Delphi 运行时依赖的 DLL 文件。
+
+【修复方法】
+使用 zip 包内的 LEDCenter.exe (6434KB)，该版本为自包含版本，无需额外 DLL。
+
+【使用步骤】
+1. 解压本 zip 到任意目录（路径不要包含中文或空格）
+   例如：解压到 C:\LEDCenter
+2. 双击运行 LEDCenter.exe
+3. 首次运行会自动生成配置文件
+
+【文件说明】
+- LEDCenter.exe    主程序
+- LEDCenter.CHS    中文简体语言资源
+- LEDCenter.CHT    中文繁体语言资源
+- LEDCenter.ENU    英文语言资源
+- LEDControl.Ini   配置文件（首次运行自动生成）
+- CardInfo.dat     卡片信息库
+- LEDSupport.Dat   支持库
+- Temp.hled        临时工程文件

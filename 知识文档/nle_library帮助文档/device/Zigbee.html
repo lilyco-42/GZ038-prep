@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Zigbee</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Zigbee</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:g%3A%5Cnledevice%5Cpythonlibrary%5Cnle_library%5Cdevice%5Czigbee.py">g:\nledevice\pythonlibrary\nle_library\device\zigbee.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Zigbee.html#Zigbee">Zigbee</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="enum.html#Enum">enum.Enum</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Zigbee.html#ZigbeeType">ZigbeeType</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Zigbee">class <strong>Zigbee</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>ZigBee协议类<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Static methods defined here:<br>
+<dl><dt><a name="Zigbee-deviceZigbeeFrame"><strong>deviceZigbeeFrame</strong></a>(data)</dt><dd><tt>ZigBee设备帧<br>
+:param&nbsp;data:数据<br>
+:return:解除数据帧，下个数据帧</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getAirQualitySensorData"><strong>getAirQualitySensorData</strong></a>(data)</dt><dd><tt>获取空气质量<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getBodySensorData"><strong>getBodySensorData</strong></a>(data)</dt><dd><tt>获取人体<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getFireSensorData"><strong>getFireSensorData</strong></a>(data)</dt><dd><tt>获取火焰<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getFourInputSensorData"><strong>getFourInputSensorData</strong></a>(data)</dt><dd><tt>获取四僵入传感器<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;通道1，通道2，通道3，通道4</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getGasSensorData"><strong>getGasSensorData</strong></a>(data)</dt><dd><tt>获取可燃气<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getLightSensorData"><strong>getLightSensorData</strong></a>(data)</dt><dd><tt>获取光照<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;值</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getOneRelayFrame"><strong>getOneRelayFrame</strong></a>(serialNum, channel, isOpen)</dt><dd><tt>获取一路的继电器<br>
+:param&nbsp;serialNum:序列号<br>
+:param&nbsp;channel:&nbsp;通道号<br>
+:param&nbsp;isOpen:&nbsp;开True&nbsp;关False<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getRelayFrame"><strong>getRelayFrame</strong></a>(serialNum, isCh1Open, isCh2Open)</dt><dd><tt>获取继电器（数据帧）<br>
+:param&nbsp;serialNum:&nbsp;序列号<br>
+:param&nbsp;isCh1Open:&nbsp;继电器1&nbsp;True&nbsp;False<br>
+:param&nbsp;isCh2Open:&nbsp;继电器2&nbsp;True&nbsp;False<br>
+:return:&nbsp;数据帧</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getTempHumiSensorData"><strong>getTempHumiSensorData</strong></a>(data)</dt><dd><tt>获取温湿度值<br>
+:param&nbsp;data:数据<br>
+:return:&nbsp;温度值、湿度值</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-getZigbeeNodeInfo"><strong>getZigbeeNodeInfo</strong></a>(data)</dt><dd><tt>获取ZigBee节点信息<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;序列,传感器类型</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-isReadZigbeeFrame"><strong>isReadZigbeeFrame</strong></a>(data)</dt><dd><tt>判断数据帧是否完整可读<br>
+:param&nbsp;data:&nbsp;数据<br>
+:return:&nbsp;bool值</tt></dd></dl>
+
+<dl><dt><a name="Zigbee-shouldDropZigbeeErrorFrame"><strong>shouldDropZigbeeErrorFrame</strong></a>(data)</dt><dd><tt>是否丢弃Zigbee错误帧<br>
+:param&nbsp;data:数据<br>
+:return:bool值</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ZigbeeType">class <strong>ZigbeeType</strong></a>(<a href="enum.html#Enum">enum.Enum</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>ZigBee传感类型<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Zigbee.html#ZigbeeType">ZigbeeType</a></dd>
+<dd><a href="enum.html#Enum">enum.Enum</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>AirQuality</strong> = &lt;ZigbeeType.AirQuality: 34&gt;</dl>
+
+<dl><dt><strong>Body</strong> = &lt;ZigbeeType.Body: 17&gt;</dl>
+
+<dl><dt><strong>Fire</strong> = &lt;ZigbeeType.Fire: 36&gt;</dl>
+
+<dl><dt><strong>FourInput</strong> = &lt;ZigbeeType.FourInput: 48&gt;</dl>
+
+<dl><dt><strong>Gas</strong> = &lt;ZigbeeType.Gas: 35&gt;</dl>
+
+<dl><dt><strong>Light</strong> = &lt;ZigbeeType.Light: 33&gt;</dl>
+
+<dl><dt><strong>TemHum</strong> = &lt;ZigbeeType.TemHum: 1&gt;</dl>
+
+<hr>
+Data descriptors inherited from <a href="enum.html#Enum">enum.Enum</a>:<br>
+<dl><dt><strong>name</strong></dt>
+<dd><tt>The&nbsp;name&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</tt></dd>
+</dl>
+<dl><dt><strong>value</strong></dt>
+<dd><tt>The&nbsp;value&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</tt></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="enum.html#EnumMeta">enum.EnumMeta</a>:<br>
+<dl><dt><strong>__members__</strong></dt>
+<dd><tt>Returns&nbsp;a&nbsp;mapping&nbsp;of&nbsp;member&nbsp;name-&gt;value.<br>
+&nbsp;<br>
+This&nbsp;mapping&nbsp;lists&nbsp;all&nbsp;enum&nbsp;members,&nbsp;including&nbsp;aliases.&nbsp;Note&nbsp;that&nbsp;this<br>
+is&nbsp;a&nbsp;read-only&nbsp;view&nbsp;of&nbsp;the&nbsp;internal&nbsp;mapping.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

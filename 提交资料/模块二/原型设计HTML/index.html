@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信息发布系统 - 考勤日报表</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif; color: #333; background: #fff; min-width: 1100px; }
+
+  /* ===== 顶部标题栏 ===== */
+  .topbar { height: 60px; background: #4198C7; color: #fff; display: flex; align-items: center; padding: 0 26px; }
+  .topbar .logo { font-size: 26px; font-weight: bold; letter-spacing: 3px; }
+  .topbar .top-right { margin-left: auto; font-size: 14px; display: flex; align-items: center; gap: 18px; }
+  .topbar .top-right .date { background: rgba(255,255,255,0.18); padding: 4px 12px; border-radius: 3px; }
+  .topbar .top-right .user { background: rgba(255,255,255,0.18); padding: 4px 14px; border-radius: 3px; cursor: pointer; }
+
+  /* ===== 主体 ===== */
+  .main { display: flex; min-height: calc(100vh - 60px); }
+
+  /* ===== 左侧导航 ===== */
+  .sidebar { width: 216px; background: #FCE7E7; padding: 14px 0 20px; border-right: 1px solid #ebc9c9; flex-shrink: 0; }
+  .sidebar .nav-title { font-size: 13px; color: #8a6a6a; padding: 10px 22px 6px; letter-spacing: 1px; }
+  .sidebar .nav-item { display: block; padding: 10px 22px; font-size: 15px; color: #5a4343; cursor: pointer; position: relative; }
+  .sidebar .nav-item:hover { background: rgba(255,255,255,0.65); }
+  .sidebar .nav-item.active { background: #d89a9a; color: #fff; }
+  .sidebar .nav-item .badge { float: right; font-size: 11px; margin-top: 3px; opacity: 0.85; }
+  .sidebar .group-sep { border-top: 1px dashed #e0b9b9; margin: 12px 18px; }
+
+  /* ===== 内容区 ===== */
+  .content { flex: 1; padding: 20px 30px; background: #fff; overflow: auto; }
+  .page-title { text-align: center; font-size: 20px; font-weight: bold; color: #2a5a78; margin: 12px 0 18px; letter-spacing: 2px; }
+  .page-title .sub { display: block; font-size: 13px; font-weight: normal; color: #7f9bb0; margin-top: 4px; letter-spacing: 1px; }
+
+  /* 工具条 */
+  .toolbar { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+  .toolbar label { font-size: 13px; color: #555; }
+  .toolbar input[type="date"], .toolbar select { padding: 5px 8px; border: 1px solid #c8d4de; border-radius: 3px; font-size: 13px; }
+  .toolbar .btn { padding: 5px 16px; background: #4198C7; color: #fff; border: none; border-radius: 3px; cursor: pointer; font-size: 13px; }
+  .toolbar .btn:hover { background: #3585b0; }
+
+  /* ===== 表格 ===== */
+  table.att { width: 100%; border-collapse: collapse; background: #fff; }
+  table.att th, table.att td { border: 1px solid #CCDBE8; padding: 7px 6px; text-align: center; font-size: 14px; }
+  table.att thead th { background: #EEF4F9; color: #2f5b78; font-weight: bold; }
+  table.att tbody tr:nth-child(even) { background: #fafcfe; }
+  table.att tbody tr:hover { background: #f2f8fc; }
+  table.att td .link { color: #2b8fc3; cursor: pointer; text-decoration: underline; }
+  table.att td .link:hover { color: #1a6a94; }
+  .num-ok { color: #3a9d4d; }
+  .num-bad { color: #e05252; font-weight: bold; }
+  .period { font-weight: bold; color: #2f5b78; }
+
+  /* ===== 明细弹窗 ===== */
+  .mask { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); z-index: 99; }
+  .dialog { display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 640px; background: #fff; border-radius: 6px; z-index: 100; box-shadow: 0 6px 24px rgba(0,0,0,.3); }
+  .dialog .d-title { background: #4198C7; color: #fff; padding: 12px 18px; font-size: 15px; border-radius: 6px 6px 0 0; }
+  .dialog .d-body { padding: 16px 18px; max-height: 380px; overflow: auto; }
+  .dialog .d-close { position: absolute; right: 12px; top: 9px; color: #fff; cursor: pointer; font-size: 16px; }
+  .dialog table { width: 100%; border-collapse: collapse; }
+  .dialog table th, .dialog table td { border: 1px solid #dbe4ec; padding: 5px 6px; font-size: 13px; text-align: center; }
+  .dialog table th { background: #f2f6f9; }
+
+  .page-description { text-align: center; color: #8899aa; font-size: 13px; margin-top: 26px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">信息发布系统</div>
+  <div class="top-right">
+    <span class="date">2017年03月06日 星期一</span>
+    <span class="user">教师：张老师 ▾</span>
+  </div>
+</div>
+
+<div class="main">
+  <!-- 左侧导航 -->
+  <div class="sidebar">
+    <div class="nav-title">— 学生考勤 —</div>
+    <a class="nav-item" data-page="手机课程表">手机课程表</a>
+    <a class="nav-item active" data-page="考勤日报表">考勤日报表</a>
+    <a class="nav-item" data-page="考勤汇总">考勤汇总</a>
+    <a class="nav-item" data-page="请假列表">请假列表 <span class="badge">已审批</span></a>
+    <a class="nav-item" data-page="审核假期">审核假期 <span class="badge">待审</span></a>
+    <a class="nav-item" data-page="面部数据采集">面部数据采集</a>
+    <a class="nav-item" data-page="学生考勤汇总">学生考勤汇总</a>
+    <div class="group-sep"></div>
+    <div class="nav-title">— 课程管理 —</div>
+    <a class="nav-item" data-page="课程表">课程表</a>
+    <a class="nav-item" data-page="课程合并">课程合并</a>
+    <a class="nav-item" data-page="代记录">代记录</a>
+    <a class="nav-item" data-page="课程互换记录">课程互换记录</a>
+  </div>
+
+  <!-- 内容区 -->
+  <div class="content">
+    <div class="page-title">
+      15计算机应用1班 考勤日报表
+      <span class="sub">2017年03月06日 星期一，第4周</span>
+    </div>
+
+    <div class="toolbar">
+      <label>日期：</label>
+      <input type="date" value="2017-03-06">
+      <label>班级：</label>
+      <select>
+        <option selected>15计算机应用1班</option>
+        <option>15计算机应用2班</option>
+        <option>16网络班</option>
+      </select>
+      <button class="btn" onclick="alert('已按条件查询考勤日报表。')">查询</button>
+    </div>
+
+    <table class="att" id="attTable">
+      <thead>
+        <tr>
+          <th>节次</th>
+          <th>课程</th>
+          <th>教室</th>
+          <th>老师</th>
+          <th>学生</th>
+          <th>正常勤</th>
+          <th>异常勤</th>
+          <th>请假</th>
+          <th>免勤</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="period">早自习</td><td>早自习</td><td>崇德楼/205</td><td>项邦孟</td><td>44</td>
+          <td class="num-ok">44</td><td class="num-bad">0</td><td>0</td><td>0</td>
+          <td><a class="link" onclick="showDetail('早自习','早自习')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第1节</td><td>语文人教版(四)</td><td>崇德楼/205</td><td>潘汐之</td><td>43</td>
+          <td class="num-ok">39</td><td class="num-bad">2</td><td>1</td><td>1</td>
+          <td><a class="link" onclick="showDetail('第1节','语文人教版(四)')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td></td><td>语文人教版(四)</td><td>笃学楼/208</td><td>郑昱虎</td><td>4</td>
+          <td class="num-ok">0</td><td class="num-bad">4</td><td>0</td><td>0</td>
+          <td><a class="link" onclick="showDetail('第1节','语文人教版(四)')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第2节</td><td>英语拓展4</td><td>崇德楼/205</td><td>陈梦祺</td><td>43</td>
+          <td class="num-ok">32</td><td class="num-bad">11</td><td>0</td><td>0</td>
+          <td><a class="link" onclick="showDetail('第2节','英语拓展4')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第3节</td><td>VB程序设计2</td><td>践行楼/计算机公共场地</td><td>王丁丁</td>
+          <td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第3节','VB程序设计2')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第4节</td><td>VB程序设计2</td><td>践行楼/计算机公共场地</td><td>黄苑军</td>
+          <td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第4节','VB程序设计2')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第5节</td><td>数学拓展4</td><td>崇德楼/205</td><td>张穗平</td>
+          <td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第5节','数学拓展4')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td></td><td>数学人教版(四)</td><td>笃学楼/208</td><td>李江</td>
+          <td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第5节','数学人教版(四)')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td></td><td>图形图像设计与制作2</td><td>践行楼/公共机房(一)</td><td>张穗平</td>
+          <td></td><td></td><td></td><td></td><td></td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="period">第6节</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第6节','')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第7节</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第7节','')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第8节</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第8节','')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第9节</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第9节','')">查看明细</a></td>
+        </tr>
+        <tr>
+          <td class="period">第10节</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td><a class="link" onclick="showDetail('第10节','')">查看明细</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="page-description">原型设计页面 — 信息发布系统 / 考勤日报表（原型交互：点击左侧菜单切换功能、点击“查看明细”查看详情）</div>
+  </div>
+</div>
+
+<!-- 明细弹窗 -->
+<div class="mask" id="mask" onclick="closeDetail()"></div>
+<div class="dialog" id="dialog">
+  <span class="d-close" onclick="closeDetail()">✕</span>
+  <div class="d-title" id="dTitle">考勤明细</div>
+  <div class="d-body">
+    <table>
+      <thead>
+        <tr><th class="period">学号</th><th>姓名</th><th>考勤状态</th><th>备注</th></tr>
+      </thead>
+      <tbody id="dBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+var navItems = document.querySelectorAll('.nav-item');
+navItems.forEach(function (item) {
+  item.addEventListener('click', function () {
+    navItems.forEach(function (i) { i.classList.remove('active'); });
+    item.classList.add('active');
+    var page = item.getAttribute('data-page');
+    document.querySelector('.page-description').textContent = '原型设计页面 — 信息发布系统 / ' + page + '（原型示意，点击左侧菜单切换功能）';
+    document.querySelector('.page-title').insertAdjacentHTML('afterbegin', '');
+  });
+});
+
+function showDetail(period, course) {
+  document.getElementById('dTitle').textContent = '考勤明细 — ' + period + '（' + course + '）';
+  var students = [
+    ['2015010101', '陈晓', '正常勤'], ['2015010102', '李强', '正常勤'],
+    ['2015010103', '王芳', '正常勤'], ['2015010104', '赵磊', '正常勤'],
+    ['2015010105', '周敏', '异常勤'], ['2015010106', '吴昊', '请假']
+  ];
+  var html = '';
+  students.forEach(function (s) {
+    var cls = s[2] === '异常勤' ? ' class="num-bad"' : '';
+    html += '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td><td' + cls + '>' + s[2] + '</td><td>—</td></tr>';
+  });
+  document.getElementById('dBody').innerHTML = html;
+  document.getElementById('mask').style.display = 'block';
+  document.getElementById('dialog').style.display = 'block';
+}
+
+function closeDetail() {
+  document.getElementById('mask').style.display = 'none';
+  document.getElementById('dialog').style.display = 'none';
+}
+</script>
+</body>
+</html>

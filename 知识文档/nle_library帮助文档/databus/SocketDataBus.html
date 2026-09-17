@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module SocketDataBus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>SocketDataBus</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:g%3A%5Cnledevice%5Cpythonlibrary%5Cnle_library%5Cdatabus%5Csocketdatabus.py">g:\nledevice\pythonlibrary\nle_library\databus\socketdatabus.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="threading.html">threading</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="nle_library.databus.DataBus.html#DataBus">nle_library.databus.DataBus.DataBus</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="SocketDataBus.html#SocketDataBus">SocketDataBus</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SocketDataBus">class <strong>SocketDataBus</strong></a>(<a href="nle_library.databus.DataBus.html#DataBus">nle_library.databus.DataBus.DataBus</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Socket总线<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="SocketDataBus.html#SocketDataBus">SocketDataBus</a></dd>
+<dd><a href="nle_library.databus.DataBus.html#DataBus">nle_library.databus.DataBus.DataBus</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SocketDataBus-__init__"><strong>__init__</strong></a>(self, ip, port)</dt><dd><tt>构造函数<br>
+:param&nbsp;ip:IP地址<br>
+:param&nbsp;port:&nbsp;端口</tt></dd></dl>
+
+<dl><dt><a name="SocketDataBus-close"><strong>close</strong></a>(self)</dt><dd><tt>关闭Socket</tt></dd></dl>
+
+<dl><dt><a name="SocketDataBus-openSuccess"><strong>openSuccess</strong></a>(self)</dt><dd><tt>连接状态<br>
+:return:bool值</tt></dd></dl>
+
+<dl><dt><a name="SocketDataBus-setup"><strong>setup</strong></a>(self, connectResultListener)</dt><dd><tt>启动连接<br>
+:param&nbsp;connectResultListener:&nbsp;连接回调</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="nle_library.databus.DataBus.html#DataBus">nle_library.databus.DataBus.DataBus</a>:<br>
+<dl><dt><a name="SocketDataBus-addObserverListener"><strong>addObserverListener</strong></a>(self, connectorListener)</dt><dd><tt>添加连接监听器<br>
+:param&nbsp;connectorListener:&nbsp;监听器</tt></dd></dl>
+
+<dl><dt><a name="SocketDataBus-notify_observers"><strong>notify_observers</strong></a>(self, data)</dt><dd><tt>通知数据观察者<br>
+:param&nbsp;data:&nbsp;数据</tt></dd></dl>
+
+<dl><dt><a name="SocketDataBus-register_observer"><strong>register_observer</strong></a>(self, observer)</dt><dd><tt>注册数据观察者<br>
+:param&nbsp;observer:&nbsp;数据观察者</tt></dd></dl>
+
+<dl><dt><a name="SocketDataBus-removeObserverListener"><strong>removeObserverListener</strong></a>(self, connectorListener)</dt><dd><tt>移除连接监听器<br>
+:param&nbsp;connectorListener:&nbsp;监听器</tt></dd></dl>
+
+<dl><dt><a name="SocketDataBus-remove_observer"><strong>remove_observer</strong></a>(self, observer)</dt><dd><tt>移除数据观察者<br>
+:param&nbsp;observer:&nbsp;数据观察者</tt></dd></dl>
+
+<dl><dt><a name="SocketDataBus-sendProtocol"><strong>sendProtocol</strong></a>(self, data)</dt><dd><tt>发送协议<br>
+:param&nbsp;data:数据</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="nle_library.databus.DataBus.html#DataBus">nle_library.databus.DataBus.DataBus</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-sleep"><strong>sleep</strong></a>(...)</dt><dd><tt><a href="#-sleep">sleep</a>(seconds)<br>
+&nbsp;<br>
+Delay&nbsp;execution&nbsp;for&nbsp;a&nbsp;given&nbsp;number&nbsp;of&nbsp;seconds.&nbsp;&nbsp;The&nbsp;argument&nbsp;may&nbsp;be<br>
+a&nbsp;floating&nbsp;point&nbsp;number&nbsp;for&nbsp;subsecond&nbsp;precision.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>AF_INET</strong> = &lt;AddressFamily.AF_INET: 2&gt;<br>
+<strong>SOCK_STREAM</strong> = &lt;SocketKind.SOCK_STREAM: 1&gt;</td></tr></table>
+</body></html>

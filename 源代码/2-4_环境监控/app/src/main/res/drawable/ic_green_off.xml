@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- 微弱灰光 -->
+    <path
+        android:fillColor="#1E616161"
+        android:pathData="M64,64 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0" />
+    <!-- 灯体 -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M64,64 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
+    <!-- 灯体亮部 -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M64,64 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0" />
+    <!-- 灯芯 -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M64,64 m-13,0 a13,13 0 1,1 26,0 a13,13 0 1,1 -26,0" />
+    <!-- 高光 -->
+    <path
+        android:fillColor="#E6FFFFFF"
+        android:pathData="M46,45 m-10,0 a10,7 0 1,1 20,0 a10,7 0 1,1 -20,0" />
+</vector>

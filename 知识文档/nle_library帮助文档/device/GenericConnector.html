@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module GenericConnector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>GenericConnector</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:g%3A%5Cnledevice%5Cpythonlibrary%5Cnle_library%5Cdevice%5Cgenericconnector.py">g:\nledevice\pythonlibrary\nle_library\device\genericconnector.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="threading.html">threading</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="GenericConnector.html#GenericConnector">GenericConnector</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GenericConnector">class <strong>GenericConnector</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>通用连接器<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GenericConnector-__init__"><strong>__init__</strong></a>(self, dataBus, connectCallback=None)</dt><dd><tt>构造函数<br>
+:param&nbsp;dataBus:数据总线<br>
+:param&nbsp;connectCallback:连接监听器</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-controlRGB"><strong>controlRGB</strong></a>(self, red, green, blue, address, callback, timeout=0.5)</dt><dd><tt>控制RGB灯<br>
+:param&nbsp;red:R值<br>
+:param&nbsp;green:G值<br>
+:param&nbsp;blue:B值<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-controlRGBOne"><strong>controlRGBOne</strong></a>(self, channel, value, address, callback, timeout=0.5)</dt><dd><tt>控制RGB灯其中一种颜色<br>
+:param&nbsp;channel:&nbsp;通道<br>
+:param&nbsp;value:&nbsp;值<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-getUWBData"><strong>getUWBData</strong></a>(self, callback, timeout=None)</dt><dd><tt>获取UWB数据<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-readSingleEpc"><strong>readSingleEpc</strong></a>(self, callback=None, timeout=None)</dt><dd><tt>读取Epc<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-readSingleEpcData"><strong>readSingleEpcData</strong></a>(self, address, callback=None, timeout=0.5)</dt><dd><tt>读Epc数据<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendAllInOneAirQuality"><strong>sendAllInOneAirQuality</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求多合一空气质量<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendAllInOneBody"><strong>sendAllInOneBody</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求多合一人体<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendAllInOneGetAddress"><strong>sendAllInOneGetAddress</strong></a>(self, callback, timeout=0.5)</dt><dd><tt>请求多合一传感器地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:超时时间<br>
+:return:DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendAllInOnePM25"><strong>sendAllInOnePM25</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求多合一PM2.5数值<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:超时时间<br>
+:return:DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendAllInOnePressure"><strong>sendAllInOnePressure</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求多合一大气压力<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendAllInOneTempHum"><strong>sendAllInOneTempHum</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求多合一温湿度<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleBate"><strong>sendEleBate</strong></a>(self, address, baud, callback, timeout=0.5)</dt><dd><tt>发送设置电机控制器波特率<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;baud:&nbsp;波特率<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleGetAddress"><strong>sendEleGetAddress</strong></a>(self, callback, timeout=0.5)</dt><dd><tt>请求电机控制器地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleGetDirection"><strong>sendEleGetDirection</strong></a>(self, address, channel, callback, timeout=0.5)</dt><dd><tt>请求电机控制方向<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleGetFrequency"><strong>sendEleGetFrequency</strong></a>(self, address, channel, callback, timeout=0.5)</dt><dd><tt>请求电机控制器频率<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;channel:通道（1~2）<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:超时时间<br>
+:return:DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleGetSpeed"><strong>sendEleGetSpeed</strong></a>(self, address, channel, callback, timeout=0.5)</dt><dd><tt>请求电机控制器速度<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleSetAddress"><strong>sendEleSetAddress</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>发送设置电机控制器地址<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleSetDirection"><strong>sendEleSetDirection</strong></a>(self, address, channel, direction, callback, timeout=0.5)</dt><dd><tt>设置电机控制方向<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:param&nbsp;direction:&nbsp;方向（0~1）<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleSetFrequency"><strong>sendEleSetFrequency</strong></a>(self, address, channel, freq2pwm, callback, timeout=0.5)</dt><dd><tt>设置电机控制器频率<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:param&nbsp;freq2pwm:&nbsp;频率<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleSetSpeed"><strong>sendEleSetSpeed</strong></a>(self, address, channel, speed, callback, timeout=0.5)</dt><dd><tt>设置电机控制器速度<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:param&nbsp;speed:&nbsp;转速<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendEleStop"><strong>sendEleStop</strong></a>(self, address, channel, callback, timeout=0.5)</dt><dd><tt>设置电机控制器刹车<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~2）<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGPSAddress"><strong>sendGPSAddress</strong></a>(self, callback, timeout=0.5)</dt><dd><tt>请求GPS地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGPSBps"><strong>sendGPSBps</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求GPS&nbsp;Bps<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGPSOdd"><strong>sendGPSOdd</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求GPS&nbsp;Odd<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGPSVersion"><strong>sendGPSVersion</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求GPS版本<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGatewayControl"><strong>sendGatewayControl</strong></a>(self, apitag, cmdid, value, callback, timeout=0.5)</dt><dd><tt>控制网关的执行器设备<br>
+:param&nbsp;apitag:&nbsp;设备标识<br>
+:param&nbsp;cmdid:&nbsp;cmdid<br>
+:param&nbsp;value:&nbsp;值<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGatewaySearch"><strong>sendGatewaySearch</strong></a>(self, apitag, callback, timeout=0.5)</dt><dd><tt>读取网关的设备数据<br>
+:param&nbsp;apitag:设备标识<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGet485Co2Value"><strong>sendGet485Co2Value</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求485型二氧化碳<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGetGPSData"><strong>sendGetGPSData</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求GPS&nbsp;数据<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGetIlluminance"><strong>sendGetIlluminance</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>发送设置光照噪声的光照值<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendGetNoise"><strong>sendGetNoise</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>发送设置光照噪声的噪声值<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLedClearScreen"><strong>sendLedClearScreen</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>清除LED屏内容<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLedDeleteWindow"><strong>sendLedDeleteWindow</strong></a>(self, address, winId, callback, timeout=0.5)</dt><dd><tt>删除窗体<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;winId:&nbsp;窗体ID<br>
+:param&nbsp;callback:&nbsp;回调<br>
+:param&nbsp;timeout:&nbsp;回调方法<br>
+:return:&nbsp;超时时间</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLedScreenText"><strong>sendLedScreenText</strong></a>(self, address, x, y, textSize, textColor, txt, callback, timeout=0.5)</dt><dd><tt>LED屏显示文本<br>
+:param&nbsp;address:&nbsp;设备地址<br>
+:param&nbsp;x:&nbsp;X<br>
+:param&nbsp;y:&nbsp;Y<br>
+:param&nbsp;textSize:字号&nbsp;（12~16）<br>
+:param&nbsp;textColor:&nbsp;颜色（0~1）<br>
+:param&nbsp;txt:&nbsp;字符串<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLedScreenWindow"><strong>sendLedScreenWindow</strong></a>(self, address, x, y, width, height, txt, clear, effect, speed, stay, textSize, textColor, callback, timeout=0.5)</dt><dd><tt>窗体文本<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;x:x起始坐标<br>
+:param&nbsp;y:y起始坐标<br>
+:param&nbsp;width:宽<br>
+:param&nbsp;height:高<br>
+:param&nbsp;txt:文本内容<br>
+:param&nbsp;clear:是否播放前清屏0不清&nbsp;1清屏<br>
+:param&nbsp;effect:特效&nbsp;5上移&nbsp;6下移&nbsp;7左移&nbsp;8右移&nbsp;(0~37)<br>
+:param&nbsp;speed:播放速度&nbsp;0-7<br>
+:param&nbsp;stay:停留时间&nbsp;&nbsp;秒<br>
+:param&nbsp;textSize:字体大小12&nbsp;14&nbsp;16<br>
+:param&nbsp;textColor:字体颜色0&nbsp;黑&nbsp;1&nbsp;红<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLinkAllOnOff"><strong>sendLinkAllOnOff</strong></a>(self, address, isAllOn, callback, timeout=0.5)</dt><dd><tt>设置联动控制器全开全关<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;isAllOn:&nbsp;True开，False关<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLinkControlOut"><strong>sendLinkControlOut</strong></a>(self, address, channel, isOpen, callback, timeout=0.5)</dt><dd><tt>设置联动控制器OUT口<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;端口（0~3）<br>
+:param&nbsp;isOpen:&nbsp;True开或False关<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLinkFlashOnOff"><strong>sendLinkFlashOnOff</strong></a>(self, address, isFlashOn, callback, timeout=0.5)</dt><dd><tt>设置联动控制器闪开闪闭<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;isFlashOn:&nbsp;True开，False关<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLinkReadIn"><strong>sendLinkReadIn</strong></a>(self, address, channel, callback, timeout=0.5)</dt><dd><tt>读取联动控制器IN口<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;端口（0~3）<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLinkReadOut"><strong>sendLinkReadOut</strong></a>(self, address, channel, callback, timeout=0.5)</dt><dd><tt>读取联动控制器OUT口<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;端口（0~3）<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendLouverBoxValue"><strong>sendLouverBoxValue</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求百叶箱值<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendReadLedBlue"><strong>sendReadLedBlue</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>获取RGB灯蓝色值<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendReadLedGreen"><strong>sendReadLedGreen</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>获取RGB灯绿色值<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendReadLedRed"><strong>sendReadLedRed</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>获取RGB灯红色值<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendRtuIotAddress"><strong>sendRtuIotAddress</strong></a>(self, callback, timeout=0.5)</dt><dd><tt>RTU模式获取Iot采集器地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendRtuReadDI"><strong>sendRtuReadDI</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>RTU模式获取IOT采集器DI口<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendRtuSetIotAddress"><strong>sendRtuSetIotAddress</strong></a>(self, oldAddress, address, callback, timeout=0.5)</dt><dd><tt>&nbsp;RTU模式设置Iot采集器地址<br>
+:param&nbsp;oldAddress:旧地址<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:超时时间<br>
+:return:DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendRtuWriteData"><strong>sendRtuWriteData</strong></a>(self, address, channel, isOpen, callback, timeout=0.5)</dt><dd><tt>RTU模式设置IOT采集器DO口<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;通道（1~8）<br>
+:param&nbsp;isOpen:&nbsp;开或关<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:超时时间<br>
+:return:DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendRtugetIOTVirtData"><strong>sendRtugetIOTVirtData</strong></a>(self, address, channel, callback, timeout=0.5)</dt><dd><tt>RTU模式获取Iot采集器AIN数值<br>
+:param&nbsp;address:&nbsp;设备地址<br>
+:param&nbsp;channel:&nbsp;端口（0,2,4）<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:超时时间<br>
+:return:DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendSet485Co2Adress"><strong>sendSet485Co2Adress</strong></a>(self, oldAddress, address, callback, timeout=0.5)</dt><dd><tt>请求485型二氧化碳地址<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendSetGPSAddress"><strong>sendSetGPSAddress</strong></a>(self, oldAddress, address, callback, timeout=0.5)</dt><dd><tt>发送设置GPS地址<br>
+:param&nbsp;oldAddress:旧地址<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendSetGPSBps"><strong>sendSetGPSBps</strong></a>(self, address, baud, callback, timeout=0.5)</dt><dd><tt>发送设置GPS&nbsp;Bps<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;baud:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendSetIOTaddress"><strong>sendSetIOTaddress</strong></a>(self, oldAddress, address, callback, timeout=0.5)</dt><dd><tt>TCP模式设置IOT采集器地址<br>
+:param&nbsp;oldAddress:&nbsp;旧地址<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendSetIlluminanceNoiseAddress"><strong>sendSetIlluminanceNoiseAddress</strong></a>(self, oldAddress, address, callback, timeout=0.5)</dt><dd><tt>发送设置光照噪声地址<br>
+:param&nbsp;oldAddress:&nbsp;旧地址<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendTCPIOTAddress"><strong>sendTCPIOTAddress</strong></a>(self, callback, timeout=0.5)</dt><dd><tt>TCP模式获取IoT采集器地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendTCPReadDI"><strong>sendTCPReadDI</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>TCP模式获取IOT采集器DI口<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendTCPSetDoVlue"><strong>sendTCPSetDoVlue</strong></a>(self, address, channel, isOpen, callback, timeout=0.5)</dt><dd><tt>TCP模式设置IOT采集器的DO口<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;channel:通道（1~8）<br>
+:param&nbsp;isOpen:开True或关False<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:超时时间<br>
+:return:DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendTCPgetIOTVirtData"><strong>sendTCPgetIOTVirtData</strong></a>(self, address, channel, callback, timeout=0.5)</dt><dd><tt>TCP模式获取IOT采集器AIN数值<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;channel:&nbsp;端口（0,2,4）<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendUltrasonicSetAddress"><strong>sendUltrasonicSetAddress</strong></a>(self, oldAddress, address, callback, timeout=0.5)</dt><dd><tt>发送设置超声波地址<br>
+:param&nbsp;oldAddress:旧地址<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendUltrasonicValue"><strong>sendUltrasonicValue</strong></a>(self, address, readMode=0, callback=None, timeout=0.5)</dt><dd><tt>请求超声波值<br>
+:param&nbsp;address:&nbsp;地址<br>
+:param&nbsp;readMode:&nbsp;0&nbsp;读取处理值,1&nbsp;读取实时值,2&nbsp;读取值<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-sendWaterImmersion"><strong>sendWaterImmersion</strong></a>(self, address, callback, timeout=0.5)</dt><dd><tt>请求水浸数据<br>
+:param&nbsp;address:设备地址<br>
+:param&nbsp;callback:回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-setZigbeeDataListener"><strong>setZigbeeDataListener</strong></a>(self, callback)</dt><dd><tt>设置ZigBee数据监听<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-writeSingleEpcData"><strong>writeSingleEpcData</strong></a>(self, address, dataStr, callback=None, timeout=0.5)</dt><dd><tt>写Epc号<br>
+:param&nbsp;address:地址<br>
+:param&nbsp;dataStr:&nbsp;数据<br>
+:param&nbsp;callback:&nbsp;回调方法<br>
+:param&nbsp;timeout:&nbsp;超时时间<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-zigbeeControl"><strong>zigbeeControl</strong></a>(self, serialNum, isCh1Open, isCh2Open)</dt><dd><tt>控制ZigBee继电器<br>
+:param&nbsp;serialNum:序列号<br>
+:param&nbsp;isCh1Open:&nbsp;第一联<br>
+:param&nbsp;isCh2Open:&nbsp;第二联<br>
+:return:&nbsp;DataObserver</tt></dd></dl>
+
+<dl><dt><a name="GenericConnector-zigbeeControlOne"><strong>zigbeeControlOne</strong></a>(self, serialNum, channel, isOpen)</dt><dd><tt>控制ZigBee继电器<br>
+:param&nbsp;serialNum:&nbsp;序列号<br>
+:param&nbsp;channel:&nbsp;通道(1~2)<br>
+:param&nbsp;isOpen:开或关<br>
+:return:DataObserver</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

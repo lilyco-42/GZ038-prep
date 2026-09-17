@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">环境监控</string>
+    <string name="title_channel_settings">通道设置</string>
+    <string name="demo_mode_hint">★ 演示模式：暂无服务器数据，正在使用模拟数据</string>
+</resources>
