@@ -14,3 +14,6 @@ local.properties
 
 # ---- 大二进制（成品压缩包不入库，需要时走 GitHub Releases）----
 *.exe
+
+# ---- 压缩包（成品统一走 Releases）----
+*.zip

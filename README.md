@@ -28,5 +28,9 @@
 
 ## 说明
 
-- 仓库为公开仓库，供备赛学习交流；apk/rar/exe 等成品压缩包不入库（体积原因），需要时可走 GitHub Releases。
+- 仓库为公开仓库，供备赛学习交流。
+- **编译成品（apk/exe/zip 等二进制）统一放在 [Releases](https://github.com/lilyco-42/GZ038-prep/releases)**（v1.0.0），不入 git：
+  - APK：env-monitor-2-4.apk / remote-monitor-2-4.apk / forest-fire-2-5.apk / env-detect-2-5.apk
+  - EXE：monitor-mgmt-2-6.exe / livingroom-env-2-7.exe（单文件版）、transport-monitor-2-6-win64.zip / smart-market-2-7-win64.zip（目录版）
+  - 工具：display-tool-fix.zip（综合显示屏工具修复版）
 - 源码已剔除 `__pycache__`、`build/`、`dist/`、`.venv/` 等生成物与本地路径配置（local.properties）。
