@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="环境监控（官方库版）"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="12dp" />
+
+        <!-- 连接配置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/IPEdit"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="IP"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/PortEdit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Port"
+                android:inputType="number"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/LinkBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="连接"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- 传感器数据显示 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="— 传感器数据 —"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="温度：" />
+            <TextView
+                android:id="@+id/sensor1Value"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="湿度：" />
+            <TextView
+                android:id="@+id/sensor2Value"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="光照/气压：" />
+            <TextView
+                android:id="@+id/sensor3Value"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="人体：" />
+            <TextView
+                android:id="@+id/sensor4Value"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="PM2.5/火焰：" />
+            <TextView
+                android:id="@+id/sensor5Value"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="空气质量/四输入：" />
+            <TextView
+                android:id="@+id/sensor6Value"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="--" />
+        </LinearLayout>
+
+        <!-- 风扇控制 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="— 风扇控制 —"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/FanOnBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="风扇开" />
+            <Button
+                android:id="@+id/FanOffBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="风扇关"
+                android:layout_marginStart="8dp" />
+            <TextView
+                android:id="@+id/fanStateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- LED 控制 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="— LED 照明灯控制 —"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/LedOnBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="LED开" />
+            <Button
+                android:id="@+id/LedOffBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="LED关"
+                android:layout_marginStart="8dp" />
+            <TextView
+                android:id="@+id/ledStateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

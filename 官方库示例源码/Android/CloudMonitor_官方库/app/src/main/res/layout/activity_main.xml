@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="远程监控（云平台官方库版）"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="12dp" />
+
+        <EditText
+            android:id="@+id/userEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="用户名" />
+
+        <EditText
+            android:id="@+id/pwdEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="密码"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/projectEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="项目ID（如 966169）"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录云平台" />
+
+        <Button
+            android:id="@+id/queryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获取传感器数据（temp）" />
+
+        <TextView
+            android:id="@+id/dataText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/controlOnBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="控制 ON" />
+
+            <Button
+                android:id="@+id/controlOffBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="控制 OFF"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
