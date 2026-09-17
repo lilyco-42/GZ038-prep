@@ -1,0 +1,14 @@
+{
+  "mode": "cloud",
+  "base_url": "http://192.168.0.138",
+  "username": "18900000000",
+  "password": "",
+  "refresh_sec": 10,
+  "sensors": {
+    "温度": "m_temp",
+    "湿度": "m_hum",
+    "光照": "m_light",
+    "CO2": "m_co2",
+    "噪音": "m_noise"
+  }
+}

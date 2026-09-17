@@ -1,0 +1,30 @@
+{
+  "mode": "demo",
+  "cloud_url": "http://192.168.0.138",
+  "cloud_user": "18912345600",
+  "cloud_pwd": "123456",
+  "device_id": 1,
+  "serial_server_ip": "172.18.X.15",
+  "serial_server_port": 4196,
+  "tags": {
+    "temp": "m_temp",
+    "hum": "m_hum",
+    "co2": "m_co2",
+    "noise": "m_noise"
+  },
+  "door": {
+    "putt_tag": "m_pushrod_putt",
+    "back_tag": "m_pushrod_back"
+  },
+  "camera": {
+    "ip": "172.18.X.13",
+    "port": 80,
+    "user": "admin",
+    "pass": "admin123",
+    "snapshot_url": "http://{ip}:{port}/snapshot.jpg",
+    "ptz_url": "http://{ip}:{port}/ptz_control.cgi?cmd={dir}&user={user}&pwd={pass}"
+  },
+  "save_interval_sec": 5,
+  "db_file": "gate_env.db",
+  "snapshot_dir": "snapshots"
+}

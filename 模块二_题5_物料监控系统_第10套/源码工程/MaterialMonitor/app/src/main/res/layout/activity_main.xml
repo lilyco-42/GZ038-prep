@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="物料监控系统"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_speed"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="当前转速: -- rpm"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_rotor"
+        android:layout_below="@id/tv_speed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/rotor" />
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_below="@id/iv_rotor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="正常搅拌"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_below="@id/tv_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="待机监控"
+        android:textSize="15sp"
+        android:textColor="#555555" />
+
+    <!-- 三色灯指示(底部左) -->
+    <LinearLayout
+        android:id="@+id/lamp_row"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tv_lamp_r"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="8dp"
+            android:background="#555555" />
+        <TextView
+            android:id="@+id/tv_lamp_y"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="8dp"
+            android:background="#555555" />
+        <TextView
+            android:id="@+id/tv_lamp_g"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="#555555" />
+    </LinearLayout>
+
+    <!-- 右下角: 转速太快报警提示 -->
+    <TextView
+        android:id="@+id/tv_alarm"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#C62828"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:text="转速太快!"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

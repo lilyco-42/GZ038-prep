@@ -1,0 +1,19 @@
+{
+  "mode": "demo",
+  "sample_interval_sec": 5,
+  "chart_points": 6,
+  "export_count": 20,
+  "depth_threshold_cm": 50,
+  "ultrasonic": {
+    "source": "sim",
+    "serial_port": "COM3",
+    "baudrate": 9600,
+    "api_tag": "m_ultrasonic"
+  },
+  "actuator": {
+    "strobe_red_tag": "m_strobe_red",
+    "steady_green_tag": "m_steady_green",
+    "note": "本任务禁止使用云服务获取数据或控制设备，灯光由联动控制器/串口直连控制"
+  },
+  "export_file": "钻井深度监测导出.xlsx"
+}

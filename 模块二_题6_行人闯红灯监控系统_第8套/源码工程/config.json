@@ -1,0 +1,25 @@
+{
+  "mode": "demo",
+  "cloud": {
+    "base_url": "http://192.168.0.138",
+    "username": "18912345600",
+    "password": "123456"
+  },
+  "device": {
+    "device_id": 0,
+    "switch_tag": "m_travelSwitch_singleWheel",
+    "laser_tag": "m_laser",
+    "red_lamp_tag": "m_multi_red",
+    "green_lamp_tag": "m_multi_green",
+    "alarm_tag": "m_rotating_lamp"
+  },
+  "serial_server": {
+    "host": "192.168.0.15",
+    "port": 4103,
+    "channel": "COM3",
+    "d4_red": "D4",
+    "d3_green": "D3",
+    "d6_alarm": "D6"
+  },
+  "poll_interval_sec": 1
+}

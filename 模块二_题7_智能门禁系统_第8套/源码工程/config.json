@@ -1,0 +1,21 @@
+{
+  "mode": "demo",
+  "cloud": {
+    "base_url": "http://192.168.0.138",
+    "username": "18912345600",
+    "password": "123456"
+  },
+  "device": {
+    "device_id": 0,
+    "rfid_tag": "m_uhf_epc",
+    "travel_tag": "m_travelSwitch",
+    "near_tag": "m_near",
+    "laser_tag": "m_laser",
+    "pushrod_putt_tag": "m_pushrod_putt",
+    "pushrod_back_tag": "m_pushrod_back",
+    "led_display_tag": "m_led_text"
+  },
+  "timeout_sec": 10,
+  "unregistered_clear_sec": 5,
+  "poll_interval_sec": 1
+}

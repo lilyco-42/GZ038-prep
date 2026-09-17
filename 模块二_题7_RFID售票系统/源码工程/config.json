@@ -1,0 +1,9 @@
+{
+  "total_seats": 10,
+  "uhf": {
+    "port": "COM3",
+    "baud": 115200,
+    "mode": "simulate"
+  },
+  "data_file": "seat_tickets.json"
+}

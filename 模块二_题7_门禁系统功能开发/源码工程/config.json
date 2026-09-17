@@ -1,0 +1,16 @@
+{
+  "mode": "demo",
+  "cloud": {
+    "base_url": "http://192.168.0.138",
+    "username": "18912345600",
+    "password": "iot123456"
+  },
+  "device": {
+    "device_id": 12345,
+    "uhf_tag": "m_uhf_epc",
+    "multi_red_tag": "m_multi_red"
+  },
+  "poll_interval_sec": 2,
+  "image_show_sec": 5,
+  "export_file": "门禁刷卡记录导出.xlsx"
+}

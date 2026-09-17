@@ -1,0 +1,19 @@
+{
+  "serial_server_ip": "172.18.X.15",
+  "serial_server_port": 4196,
+  "mode": "demo",
+  "temp_threshold": 30.0,
+  "sensor_tags": {
+    "zigbee_temp": "z_temp",
+    "zigbee_hum": "z_hum",
+    "smoke": "m_smoke",
+    "body": "m_microwave"
+  },
+  "actuator_tags": {
+    "lamp": "m_lamp",
+    "fan": "m_fan",
+    "alarm": "m_rotating_lamp",
+    "pushrod_putt": "m_pushrod_putt",
+    "pushrod_back": "m_pushrod_back"
+  }
+}

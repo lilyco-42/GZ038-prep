@@ -1,0 +1,9 @@
+提交资料说明
+============
+子任务2-4 RGB灯带调试器（第10套）
+
+本目录为提交副本，与 源码工程/RGBLedDebugger/ 一致。
+请将整个 模块二_题4_RGB灯带调试器_第10套 拷贝到服务器 D:\提交资料\模块二\题4。
+
+App 发布名：RGB灯带调试器
+云连接参数在 MainActivity.java 顶部 CLOUD_URL / CLOUD_USER / CLOUD_PWD，按工位号修改。

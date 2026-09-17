@@ -1,0 +1,11 @@
+{
+  "mode": "demo",
+  "cloud_url": "http://192.168.0.138",
+  "cloud_user": "18912345600",
+  "cloud_pwd": "123456",
+  "device_id": 1,
+  "alarm_apitag": "m_rotating_lamp",
+  "serial_server_ip": "172.18.X.15",
+  "serial_server_port": 4196,
+  "data_file": "products.json"
+}

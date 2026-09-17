@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 厨房一氧化碳检测系统主界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="厨房一氧化碳检测系统"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:padding="10dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_co_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="一氧化碳: -- ppm"
+        android:textColor="@color/colorAccent"
+        android:textSize="26sp"
+        android:padding="12dp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_fan"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/fan_blade"
+                android:contentDescription="风扇" />
+
+            <TextView
+                android:id="@+id/tv_fan_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="风扇：关闭"
+                android:textColor="@color/textDim"
+                android:padding="6dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_window"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/window_pane"
+                android:contentDescription="窗户" />
+
+            <TextView
+                android:id="@+id/tv_window_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="窗户：关闭"
+                android:textColor="@color/textDim"
+                android:padding="6dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启监控" />
+
+</LinearLayout>

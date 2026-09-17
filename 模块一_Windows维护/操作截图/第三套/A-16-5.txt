@@ -1,0 +1,2 @@
+tar -xzvf mysql.5.7.tar.gz
+  

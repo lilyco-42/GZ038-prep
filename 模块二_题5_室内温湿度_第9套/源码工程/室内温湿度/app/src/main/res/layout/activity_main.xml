@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 子任务2-5 室内温湿度: 温度/湿度实时显示 -->
+<!-- 赛题: "温度""湿度"白色字体; 温度值#01A7FF; 湿度值#35D529 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A2332"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="室内温湿度"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="24dp" />
+
+    <!-- 温度行: 标签白色, 数值 #01A7FF -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#223344"
+        android:padding="18dp"
+        android:layout_marginBottom="14dp">
+
+        <TextView
+            android:id="@+id/tv_temp_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="温度"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_temp_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--.- ℃"
+            android:textColor="#01A7FF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 湿度行: 标签白色, 数值 #35D529 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#223344"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/tv_hum_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="湿度"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_hum_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--.- %"
+            android:textColor="#35D529"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 状态栏 -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="连接中..."
+        android:textColor="#B0BEC5"
+        android:layout_marginTop="24dp"
+        android:textSize="13sp" />
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+子任务2-6 广场气象系统 —— 打包与运行说明
+================================================
+
+一、运行源码
+    进入源码工程目录，执行：
+        python 广场气象.py
+    默认 demo 模式（内置模拟百叶箱数据），先验证界面与折线图。
+
+二、连接真实云服务
+    编辑同目录 config.json：
+        "mode"      : "cloud"
+        "server_url": "http://192.168.0.138"
+        "username"  : 云服务账号
+        "password"  : 云服务密码
+        "tag_temp"  : "m_louverbox_temp"
+        "tag_hum"   : "m_louverbox_hum"
+        "refresh_second": 10
+    重新运行，即每 10 秒读取百叶箱温湿度并绘图。
+
+三、打包 exe（在服务器电脑执行）
+    pip install pyinstaller requests
+    pyinstaller -F -w 广场气象.py
+    把 dist\广场气象.exe 重命名为 c2.exe
+    （运行时需与 config.json 放在同一目录；nle_cloud.py 已被一起打包）
+
+四、验证
+    [ ] c2.exe 双击可启动，无黑框
+    [ ] 温度值/温度采集时间、湿度值/湿度采集时间 每 10 秒刷新
+    [ ] “温度-时间”“湿度-时间”两条折线图实时滚动更新
+    [ ] 已将源码拷贝到 D:\提交资料\模块二\题6
+
+五、建议留存截图
+    C-6-1.jpg  运行中显示温湿度数值与两条折线图的界面

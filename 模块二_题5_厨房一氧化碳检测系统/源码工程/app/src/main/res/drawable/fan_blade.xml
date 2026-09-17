@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 风扇叶片示意（作为 iv_fan 背景，配合 RotateAnimation 转动） -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#33FFFFFF" />
+            <stroke android:width="3dp" android:color="@color/colorAccent" />
+        </shape>
+    </item>
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorAccent" />
+            <size android:width="20dp" android:height="20dp" />
+        </shape>
+    </item>
+</layer-list>

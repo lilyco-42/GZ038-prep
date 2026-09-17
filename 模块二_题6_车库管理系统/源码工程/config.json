@@ -1,0 +1,12 @@
+{
+  "serial_server": {
+    "ip": "172.18.0.15",
+    "port": 8001,
+    "beam_addr": 0,
+    "led_screen_port": 8002
+  },
+  "total_spots": 10,
+  "poll_interval_ms": 300,
+  "simulate": true,
+  "threshold_note": "已用车位达到 total_spots 即提示车位已满"
+}

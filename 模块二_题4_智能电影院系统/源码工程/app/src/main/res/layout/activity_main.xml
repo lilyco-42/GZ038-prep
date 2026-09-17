@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 影院主界面：CO2 监测 + 风扇动画 + 照明灯开关 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="智能电影院 · 主界面"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:padding="10dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_co2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CO2: -- ppm"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/tv_fan_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="风扇：关闭"
+        android:textColor="@color/textDim"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <!-- 风扇动画区 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_fan"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/fan_blade"
+            android:contentDescription="风扇" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_lamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="照明灯：关" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回" />
+
+</LinearLayout>

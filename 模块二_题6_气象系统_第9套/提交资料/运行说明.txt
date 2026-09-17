@@ -1,0 +1,19 @@
+子任务2-6 运行说明
+========================================
+运行: python weather.py   (仅依赖 Python 标准库, 无需安装第三方包)
+
+LED屏显示(每10秒刷新一次):
+  温度 xx，湿度 xx，光照 xx，CO2 xx，噪音 xx
+
+传感器标识(config.json 可改):
+  温度=m_temp  湿度=m_hum  光照=m_light  CO2=m_co2  噪音=m_noise
+
+config.json:
+  base_url    云服务地址, 默认 http://192.168.0.138
+  username    工位注册账号
+  password    密码
+  refresh_sec 刷新周期, 默认 10
+  mode        cloud=真实云服务; demo=模拟数据(云服务不可达自动降级)
+
+验收: 窗口每10秒刷新五项数值, 格式与赛题一致。
+源码打包: 气象系统.rar -> D:\提交资料\模块二\题6
