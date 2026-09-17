@@ -43,7 +43,7 @@
 
 ## Releases（编译成品）
 
-**编译产物（apk/exe/zip 二进制）统一在 [Releases](https://github.com/lilyco-42/GZ038-prep/releases)**（v1.0.0）：
+**编译产物（apk/exe/zip 二进制）统一在 [Releases](https://github.com/lilyco-42/newland/releases)**（v1.0.0）：
 - APK：env-monitor-2-4.apk / remote-monitor-2-4.apk / forest-fire-2-5.apk / env-detect-2-5.apk
 - EXE：monitor-mgmt-2-6.exe / livingroom-env-2-7.exe（单文件版）、transport-monitor-2-6-win64.zip / smart-market-2-7-win64.zip（目录版）
 - 工具：display-tool-fix.zip（综合显示屏工具修复版）
