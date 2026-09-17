@@ -31,3 +31,31 @@
 - `DEVICE_ID` / API_TAG（设备 ID、传感器标识）
 - `GATEWAY_IP` / `GATEWAY_PORT`（串口服务器/网关 IP 端口，如 192.168.1.200:8899）
 - `ZIGBEE_SERIAL`（ZigBee 继电器短地址，默认 0x141d）
+
+## Qt 界面测试记录（2026-09-17 实测通过）
+
+**测试环境**：`D:\环境部署\运行时\python36`（Python 3.6.8 + PyQt5 5.15.4，全离线环境）
+
+**处理的问题**：Qt 平台插件找不到
+
+```
+Could not find the Qt platform plugin "windows" (0xC0000409)
+→ 设置环境变量后正常：
+QT_QPA_PLATFORM_PLUGIN_PATH=D:\环境部署\运行时\python36\Lib\site-packages\PyQt5\Qt5\plugins\platforms
+```
+
+**测试结果**
+| 界面 | 结果 |
+|---|---|
+| 监控管理系统（官方库版） | 界面完整：用户名/密码/项目ID、登录云平台按钮、温度/湿度显示、摄像头画面区、风扇开/关、LED开/关；未登录时数据区显示 `--`，符合预期 |
+| 客厅环境监控系统升级（官方库版） | 界面完整：温度/湿度/光照/人体、自动联动说明（温度>30℃开风扇/光照<50开灯）、风扇/LED 控制按钮；无硬件时数据为 `--`，控制台打印"需 py36 + nle_library"提示而非崩溃，容错正常 |
+
+**启动方式**（需带插件路径环境变量，或直接双击同目录 `.bat` 启动器）：
+```bat
+set QT_QPA_PLATFORM_PLUGIN_PATH=D:\环境部署\运行时\python36\Lib\site-packages\PyQt5\Qt5\plugins\platforms
+"D:\环境部署\运行时\python36\python.exe" monitor_system_official.py
+```
+
+**说明**
+1. 硬件数据（传感器/继电器）需连接真实设备后验证；界面层已全部验证通过
+2. 两个脚本均可通过同目录 `start_*.bat` 一键启动（已内置插件路径）
