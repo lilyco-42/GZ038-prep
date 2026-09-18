@@ -113,11 +113,11 @@ public class MainActivity extends Activity {
         final double lat = dmsToDecimal(latD, latM, latS);
 
         /* 范围判断 */
-        boolean inYunnan = (lon >= YN_LON_MIN && lon <= YN_LON_MAX
+        final boolean inYunnan = (lon >= YN_LON_MIN && lon <= YN_LON_MAX
                 && lat >= YN_LAT_MIN && lat <= YN_LAT_MAX);
 
         /* 报警灯: 区域外点亮, 否则熄灭(避免重复下发) */
-        int alarm = inYunnan ? 0 : 1;
+        final int alarm = inYunnan ? 0 : 1;
         if (alarm != lastAlarm) {
             cloud.sendCommand(TAG_ALARM, alarm);
             lastAlarm = alarm;

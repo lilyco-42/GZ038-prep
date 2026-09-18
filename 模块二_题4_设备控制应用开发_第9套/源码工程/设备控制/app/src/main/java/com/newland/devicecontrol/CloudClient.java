@@ -26,10 +26,11 @@ public class CloudClient {
     private int deviceId = -1;
 
     public CloudClient(String baseUrl) {
-        this.baseUrl = (baseUrl == null ? "" : baseUrl).trim();
-        if (this.baseUrl.endsWith("/")) {
-            this.baseUrl = this.baseUrl.substring(0, this.baseUrl.length() - 1);
+        String url = (baseUrl == null ? "" : baseUrl).trim();
+        if (url.endsWith("/")) {
+            url = url.substring(0, url.length() - 1);
         }
+        this.baseUrl = url;
     }
 
     /** 登录云服务系统, 成功返回 true */

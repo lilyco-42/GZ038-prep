@@ -49,7 +49,7 @@ public class EntranceActivity extends Activity {
                     try {
                         final String tag = RfidTicketStore.readTag();
                         if (tag != null && !tag.isEmpty()) {
-                            boolean sold = RfidTicketStore.isSold(EntranceActivity.this, tag);
+                            final boolean sold = RfidTicketStore.isSold(EntranceActivity.this, tag);
                             handler.post(new Runnable() {
                                 @Override
                                 public void run() {
